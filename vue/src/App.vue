@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <ul class="clear">
+      <!-- <li role="presentation" class="active"><router-link to="/">首页</router-link></li>
+      <li role="presentation"><router-link to="/about">关于</router-link></li>
+      <li role="presentation"><router-link to="/document">文档</router-link></li> -->
+      <li><router-link :to="index">首页</router-link></li>
+      <li><router-link to="/about">关于</router-link></li>
+      <li><router-link to="/document">文档</router-link></li>
+    </ul>
+    <router-view class="parent"></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name:"app",
+  data(){
+    return {
+      index:'/index'
+    }
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
