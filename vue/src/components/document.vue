@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main_cont">
     <h1>这是我的第一个文档</h1>
   </div>
 </template>

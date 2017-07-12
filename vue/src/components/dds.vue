@@ -1,5 +1,5 @@
 <template>
-  <div id="dds">
+  <div id="dds" class="main_cont">
     <h1>Hello World</h1>
   </div>
 </template>
