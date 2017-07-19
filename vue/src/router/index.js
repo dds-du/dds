@@ -6,6 +6,7 @@ import dds from '@/components/dds'
 import about from '@/components/about'
 import documt from '@/components/document'
 import notf from '@/components/notfound'
+import vuex from '@/components/vuex'
 //import info from '@/components/info'
 
 
@@ -13,6 +14,9 @@ import notf from '@/components/notfound'
 import about2 from '@/views/about2'
 import about3 from '@/views/about3'*/
 import r_left from '@/views/r_left'
+
+//使ie浏览器支持Promise语法
+require('native-promise-only')
 
 //利用webpack实现懒加载(按需加载),使不同的路由的js分离,以提高性能,并整合几个页面为同一个js
 let about1 = resolve => {
@@ -54,10 +58,10 @@ let router = new VueRouter({
         path: '/index',
         name:'Index',
         meta:{
-        index:1
-    },
-      component: dds,
-      alias:'/home'
+            index:1
+        },
+        component: dds,
+        alias:'/home'
     },
     {
         path:'/about',
@@ -94,7 +98,16 @@ let router = new VueRouter({
             default:documt,
             r_left
         }
-    },{
+    },
+    {
+        path: '/vuex',
+        name:'Vuex',
+        meta:{
+            index:5
+        },
+        component:vuex
+    },
+    {
         path:'/error',
         name:'Error',
         component:notf

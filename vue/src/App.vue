@@ -5,12 +5,12 @@
       <li><router-link to="/about">关于</router-link></li>
       <li><router-link to="/document">文档</router-link></li>
       <li><router-link to="/info">初始信息</router-link></li>
+      <li><router-link to="/vuex">vuex测试</router-link></li>
     </ul>
     <!-- <router-view name="r_left"></router-view> -->
     <transition :name="trans">
          <router-view class="parent"></router-view>
     </transition>
-   
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   data(){
     return {
       index:'/index',
-      trans:'left'
+      trans:''
     }
   },
   watch:{
